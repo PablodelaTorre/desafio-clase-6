@@ -28,8 +28,7 @@ class Container {
     async getById(numero){
         try {
             let informacion = await fs.promises.readFile(this.arch, "utf-8")
-            let informacionUtil = JSON.parse(informacion)
-            informacionUtil.forEach(x => {
+            let informacionUtil = JSON.parse(informacion).forEach(x => {
                 if (x.id == numero){
                     console.log(x)
                     return x
