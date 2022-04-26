@@ -3,8 +3,6 @@ const fs = require('fs')
 class Container {
     constructor(archivo){
         this.arch = archivo
-        this.numId = 0
-        this.lista = []
     }
     
     async save(objeto) {
